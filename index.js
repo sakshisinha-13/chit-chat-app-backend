@@ -39,7 +39,7 @@ const server = app.listen(PORT, () => {
 
 const io = socket(server, {
   cors: {
-    origin: "https://chit-chat-app-mu.vercel.app",
+    origin: process.env.FRONTEND_URL || "http://localhost:3000",
     credentials: true,
   },
 });
